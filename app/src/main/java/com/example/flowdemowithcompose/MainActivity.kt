@@ -25,15 +25,15 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             val viewModel = viewModel<MyViewModel>()
-            val currentValue by viewModel.myFlow.collectAsState(initial = 1)
+//            val currentValue by viewModel.myFlow.collectAsState(initial = 1)
             FlowDemoWithComposeTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background) {
-                    Text(text = "Current is $currentValue",
+                    Text(text = "Current is",
                     fontSize = 25.sp
-                        )
+                    )
                 }
             }
         }
